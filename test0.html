@@ -1,0 +1,14 @@
+var i = 0;
+function blinker(){
+  if(i === 0){
+    $('.blink_me').css('color', 'yellow').text('Don’t dream your life, live your dream!').fadeIn(800).delay(2000).fadeOut(800);
+    i = i + 1;
+  } else {
+    $('.blink_me').css('color', 'yellow').text('The longest journey begins with the first step!').fadeIn(800).delay(2000).fadeOut(800);
+    i = i - 1;
+  }
+}
+
+// 呼叫blinker函數以便開始閃爍效果
+blinker();
+setInterval(blinker, 4000); // 每4秒呼叫一次blinker函數

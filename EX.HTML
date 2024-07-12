@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade-in Text Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/mnt/data/image.png') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .animated-text {
+            text-align: center;
+            font-size: 3em;
+            color: white;
+            opacity: 0;
+            animation: fadeInAnimation 3s forwards;
+        }
+
+        .animated-text p {
+            margin: 0;
+        }
+
+        @keyframes fadeInAnimation {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-text">
+        <p>NICE TO MEET YOU!</p>
+        <p>I'M BO ZHENG</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedText = document.querySelector('.animated-text');
+            animatedText.style.animationDelay = '1s';  // 可以調整動畫延遲時間
+        });
+    </script>
+</body>
+</html>
